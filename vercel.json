@@ -1,12 +1,8 @@
 {
-    "rewrites": [{
-        "source": "/(.*)",
-        "destination": "/"
-    }]
     "version": 2,
     "builds": [
      {
-      "src": "srver.mjs",
+      "src": "server.mjs",
       "use": "@vercel/node",
       "config": { "includeFiles": ["dist/**"] }
      }
@@ -14,7 +10,7 @@
     "routes": [
      {
       "src": "/(.*)",
-      "dest": "srver.mjs"
+      "dest": "server.mjs"
      }
     ]
    }
